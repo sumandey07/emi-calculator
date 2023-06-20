@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan EMI Calculator</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1 class="start" aria-label="Toggle color mode" title="Toggle color mode" onclick="myFunction()">
+        <div class="sun visible">
+            <i id="dark-mode-btn" class="toggler far fa-sun"></i>
+        </div>
+        <div class="moon">
+            <i id="dark-mode-btn" class="toggler far fa-moon"></i>
+        </div>
+    </h1>
+    <h1 class="head">Loan EMI Calculator</h1>
+    <div class="loan-calculator">
+        <div class="top">
+
+            <form action="#">
+                <div class="group">
+                    <div>
+                        <div class="title">Amount (A)</div>
+                        <input class="loan-amount" type="text" value="30000" />
+                    </div>
+
+                    <div>
+                        <div class="title">Interest Rate (R) (in %)</div>
+                        <input class="interest-rate" type="text" value="8.5" />
+                    </div>
+
+                    <div>
+                        <div class="title">Tenure (T) (in months)</div>
+                        <input class="loan-tenure" type="text" value="240" />
+                    </div>
+                    <div>
+                        <div class="title">Processing Fees (P) (in %)</div>
+                        <input class="processing-fee" type="text" value="1.2" />
+                    </div>
+
+                    <div>
+                        <div class="title">Down Payment (D)</div>
+                        <input class="down-payment" type="text" value="3000" />
+                    </div>
+                </div>
+            </form>
+            <div class="group1">
+                <button class="calculate-btn">Calculate</button>
+            </div>
+        </div>
+
+        <div class="result">
+            <div class="left">
+                <div class="total-down-payment">
+                    <h3>Total Down Payment (TDP)<br />(TDP = D + P)</h3>
+                    <div class="value">12</div>
+                </div>
+
+                <div class="loan-emi">
+                    <h3>Loan EMI (LE)</h3>
+                    <h4>(LE = [PLA x R x
+                        (1+R)^T]/[(1+R)^T-1] )</h4>
+                    <div class="value">123</div>
+                </div>
+
+                <div class="total-interest">
+                    <h3>Total Interest Payable (TIP)<br /> (TIP = LE * T)</h3>
+                    <div class="value">1234</div>
+                </div>
+
+                <div class="total-amount">
+                    <h3>Total Payment (TP)<br />(TP = LA + TIP + P)</h3>
+                    <div class="value">12345</div>
+                </div>
+            </div>
+
+            <div class="right">
+                <canvas height="400" id="myChart" width="400"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Note: (PLA) is Principal Loan Amount, which is calculated by subtracting Down Payment (D) from Actual
+            Amount
+            (A) and Loan EMI (LE) Is Calculated on Principal Loan Amount (PLA).
+        </p>
+        <p class="connect">Connect With Me</p>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/SD0919">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://twitter.com/iam_sumandey">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/iamsumandey/">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon__item"><a class="social-icon__link" href="https://github.com/sumandey07">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a></li>
+        </ul>
+        <p>Developed by Suman Kumar Dey</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+        integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
