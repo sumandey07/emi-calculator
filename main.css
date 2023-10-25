@@ -65,6 +65,17 @@
     width: 50%;
 }
 
+.end {
+    font-weight: 800;
+}
+
+iframe {
+    height: 32px;
+    width: 114px;
+    border: 0;
+    border-radius: 6px;
+}
+
 .loan-calculator form {
     padding-right: 10px;
     padding-left: 10px;
@@ -172,6 +183,7 @@
     font-family: "Poppins", sans-serif;
     text-align: center;
     padding: 30px;
+    place-content: center;
 }
 
 .footer {
@@ -190,6 +202,10 @@
 
 .connect {
     font-weight: 900;
+}
+
+.innerspan {
+    margin-right: 30px;
 }
 
 .social-icon {
@@ -324,14 +340,13 @@
         text-align: center;
     }
 
-    .head {
-        width: 70%;
-        text-align: center;
-        padding: 30px;
+    .innerspan {
+        display: block;
+        margin-bottom: 12px;
     }
 
     .start {
         top: 20px;
-        right: 60px;
+        right: 45px;
     }
 }
